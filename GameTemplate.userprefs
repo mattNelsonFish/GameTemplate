@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs">
+    <Files>
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs" Line="298" Column="1" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\AlphabetSong.cs" Line="13" Column="2" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Avatar Creator\ActivityAvatarCreator.cs" Line="374" Column="24" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Glass Bottom Boat\GlassBottomBoatControl.cs" Line="564" Column="72" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\RemotePlayerAnimator.cs" Line="32" Column="13" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Avatar Creator\AvatarCreatorController.cs" Line="178" Column="68" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Mist Martcano\ShopController.cs" Line="128" Column="92" />
+      <File FileName="..\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Pencil Playground\PencilPlaygroundController.cs" Line="612" Column="95" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\GameDev\_Projects\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Avatar Creator\ActivityAvatarCreator.cs" line="376" />
+      <Breakpoint file="C:\GameDev\_Projects\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs" line="295" />
+      <Breakpoint file="C:\GameDev\_Projects\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs" line="300" />
+      <Breakpoint file="C:\GameDev\_Projects\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs" line="302" />
+      <Breakpoint file="C:\GameDev\_Projects\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs" line="292" />
+      <Breakpoint file="C:\GameDev\_Projects\Ooka\UnityProjects\Ooka Island 4.5.2\Assets\Activity Scripts\Alphabet Mountain\GameControl.cs" line="298" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
