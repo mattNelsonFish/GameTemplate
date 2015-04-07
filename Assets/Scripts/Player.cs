@@ -18,7 +18,7 @@ public class Player : Character{
 	
 	}
 
-	override protected void notifyManager() {
+	protected void notifyManager() {
 		CharacterManager.Instance.AddPlayer(this);
 	}
 

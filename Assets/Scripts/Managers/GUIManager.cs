@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AssetPool : MonoBehaviour {
+public class GUIManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,5 +11,9 @@ public class AssetPool : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void OnGUI() {
+
 	}
 }

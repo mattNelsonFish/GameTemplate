@@ -32,7 +32,15 @@ public class CharacterManager : Singleton<CharacterManager> {
 		m_lstAllCharacters.Add(newChar);
 	}
 
-	public void RemoveCharacter() {
+	public void RemoveCharacter(Character chr) {
+		m_lstAllCharacters.Remove(chr);
+	}
 
+	public void AddPlayer(Player newPlayer) {
+		m_lstAllPlayer.Add(newPlayer);
+	}
+
+	public void RemovePlayer(Player plyr) {
+		m_lstAllPlayer.Remove(plyr);
 	}
 }
