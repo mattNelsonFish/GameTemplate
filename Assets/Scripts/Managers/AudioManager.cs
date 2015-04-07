@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour {
 
@@ -78,12 +79,81 @@ public class AudioManager : MonoBehaviour {
 		return ac;
 	}
 
+	#region BGM control
 	/// <summary>
-	/// Plays bgm matching the provided string. Will even play if another of the same name is playing.
+	/// returns -1 if no slot found. Otherwise the int index of the the bgm open slot
+	/// </summary>
+	private int locateOpenBGMsource() {
+		int openBGMSlot = -1;
+		bool found = false;
+		for(int i = 0; i < MAX_BGM_AUDIO_SOURCES && !found; i++ ) {
+			if(mArrBGM[i].clip == null) {
+				openBGMSlot = i;
+				found = true;
+			}
+		}
+
+		return openBGMSlot;
+	}
+
+	#region locateActiveBGM
+	/// <summary>
+	/// returns -1 if no active BGM matches. Otherwise the int will show the first
+	/// </summary>
+	private int locateActiveBGM(string clipName) {
+		return locateActiveBGM(0, clipName);
+	}
+
+	private int[] locateAllActiveBGM(string clipName) {
+		List<int> allWithName = new List<int>();
+		int result = -2;
+		int startIndex = 0; ;
+		while(result != -1) {
+			result = locateActiveBGM(startIndex, clipName);
+			if(result != -1){
+				allWithName.Add(result);
+				startIndex = result + 1;
+			}
+		}
+
+		return allWithName.ToArray();
+	}
+
+	/// <summary>
+	/// returns -1 if no active BGM matches. Otherwise the int will show the first clip matching the name that
+	/// is located after the provided startIndex
+	/// </summary>
+	private int locateActiveBGM(int startIndex, string clipName) {
+		int activeBGMSlot = -1;
+		bool found = false;
+		for(int i = startIndex; i >= 0 && i < MAX_BGM_AUDIO_SOURCES && !found; i++) {
+			if(mArrBGM[i].clip == null) {
+				if(mArrBGM[i].clip != null && mArrBGM[i].clip.name == clipName) {
+					activeBGMSlot = i;
+					found = true;
+				}
+			}
+		}
+
+		return activeBGMSlot;
+	}
+
+	#endregion locateActiveBGM
+
+	/// <summary>
+	/// Plays bgm matching the provided string. Will even play if another of the same name is playing. Will not play if name is unknown.
 	/// </summary>
 	/// <param name="bgm"></param>
+	/// TODO ask if it should be unique
 	public void PlayBGM(string bgm) {
-
+		int bgmSourceSlot = locateOpenBGMsource();
+		if(bgmSourceSlot != -1) {
+			AudioClip clip = AssetManager.Instance.GetClip(bgm);
+			if(clip != null) {
+				mArrBGM[bgmSourceSlot].clip = clip;
+				mArrBGM[bgmSourceSlot].Play();
+			}
+		}
 	}
 
 	/// <summary>
@@ -113,4 +183,5 @@ public class AudioManager : MonoBehaviour {
 	public void StopBGM() {
 
 	}
+	#endregion BGM control
 }

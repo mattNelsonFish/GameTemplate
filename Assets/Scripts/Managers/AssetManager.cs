@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class AssetPool : MonoBehaviour {
+public class AssetManager : Singleton<AssetManager> {
 
 	#region AssetKey
 	public class AssetKey {
@@ -133,5 +133,17 @@ public class AssetPool : MonoBehaviour {
 		}
 
 		return result;
+	}
+
+	public AudioClip GetClip(string assetName) {
+		AssetInfo info = FindAsset(assetName, AssetType.AUDIOCLIP);
+		AudioClip ac = null;
+		if(info != null) {
+			if(!string.IsNullOrEmpty( info.Bundle)) {
+				AssetBundleManager.Instance.LoadBundleAsync(info.Bundle);
+			}
+		}
+
+		return ac;
 	}
 }
